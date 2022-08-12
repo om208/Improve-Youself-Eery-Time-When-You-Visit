@@ -125,3 +125,186 @@ let arrayOfPromise = [];
 ```
 
 - [x] I used the functions of firebase version.9 for saving documents or files in fireStore
+
+#### Q5. How to write any Pop-Up / Drawer / Snakbar / Alert or a component or a pice of code with map function ?
+
+##### 1. If want to create a such type of code or component, write this code out of map function.
+
+##### for ex.
+
+```css
+//table component start here
+<Box component="main" sx={{ flexGrow: 1 }}>
+        <Toolbar />
+        <ExpenseFormV2 />
+        <TableContainer component={Paper}>
+          <Table aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Name
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Title
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Location
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Date of Added
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  From
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Till
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Amount
+                </TableCell>
+                <TableCell align="right" sx={{ textAlign: "center" }}>
+                  Status
+                </TableCell>
+                <TableCell align="right">Edit</TableCell>
+                <TableCell align="right">View</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {dataForNormalView && dataForNormalView.length > 0                      // map function starts here
+                ? dataForNormalView.map((arrayItem) => {
+                    return (
+                      <TableRow
+                        key={arrayItem.id}
+                        sx={{
+                          "&:last-child td, &:last-child th": { border: 0 },
+                        }}
+                      >
+                        <TableCell
+                          component="th"
+                          scope="row"
+                          sx={{ textAlign: "center" }}
+                        >
+                          {arrayItem.name}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.expanceCategory}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.location}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.currentDate}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.selectDate}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.selectDateTill}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.amount}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          {arrayItem.status}
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          <IconButton
+                            disabled={
+                              arrayItem.status == "Approved" ||
+                              arrayItem.status == "reimbursed"
+                                ? true
+                                : false
+                            }
+                            // onClick={() => onDroverOpenHandler(arrayItem.id)}
+                            onClick={droverOpenFunction}
+                          >
+                            <SwipeableDrawer                                          // Swipeable drawer code start from here
+                              anchor={"right"}
+                              // open={openDrover}
+                              open={drover && drover}
+                              // disableSwipeToOpen={"true"}
+                            >
+                              <Box
+                                sx={{
+                                  width:                                                            [
+                                    "right" === "top" || "right" === "bottom"                       don`t write this code here becaus on
+                                      ? "auto"                                                      click the function or this drawer code runs
+                                      : 350,                                                        no. of times equal to the no of iterations
+                                }}                                                                  ]
+                                role="presentation"
+                                // onClick={() => setOpenDrover(!openDrover)}
+                              >
+                                {/* {console.log("idOfInstanse1", id)} */}
+                                <FormFildsForEditForm
+                                  idOfInstanse={arrayItem.id}
+                                  droverFunction={closedrover}
+                                  droverState={drover}
+                                />
+                              </Box>
+                            </SwipeableDrawer>                                            // Swipeable drawer code ends
+                            <EditIcon />
+                          </IconButton>
+                        </TableCell>
+                        <TableCell align="center" sx={{ textAlign: "center" }}>
+                          <Button
+                            variant="outlined"
+                            onClick={() => onViewFormHandler(arrayItem.id)}
+                          >
+                            View
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })
+                : ""}
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+        {
+           <SwipeableDrawer
+                              anchor={"right"}
+                              // open={openDrover}
+                              open={drover && drover}
+                              // disableSwipeToOpen={"true"}
+                            >
+                              <Box
+                                sx={{
+                                  width:
+                                    "right" === "top" || "right" === "bottom"
+                                      ? "auto"
+                                      : 350,                                                       }
+                                role="presentation"
+                                // onClick={() => setOpenDrover(!openDrover)}
+                              >
+                                {/* {console.log("idOfInstanse1", id)} */}
+                                <FormFildsForEditForm
+                                  idOfInstanse={arrayItem.id}
+                                  droverFunction={closedrover}
+                                  droverState={drover}
+                                />
+                              </Box>
+                            </SwipeableDrawer>
+        }
+
+        {showViewOnlyForm && (
+          <ExpenseFormV2
+            viewOnly={true}
+            formCloseFunction={setShowViewOnlyForm}
+          />
+        )}
+      </Box>
+// Table componentends here
+```
+
+##### after writting code after the table component give conditional rendering and pass props according to you.
+
+#### Q6 .How to axcess the child component`s state value in parent component ?
+
+#### or .How to axcess the updated value of child in parent component ?
+
+##### 1. We can done this by passing a function in child component written in parent component.
+
+##### 2. We can pass a arrow function also or useState`s function.
+
+##### 3. and call this function inside child component, if require pass some props in it .
