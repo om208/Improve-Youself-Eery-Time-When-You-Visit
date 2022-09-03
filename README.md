@@ -13,11 +13,25 @@ a problem can be small or big
 
 ##### You get your answer, just search properly I am updating it time to time
 
-###### Q#. You got a big Project. what to do now ?
+### Q#. You got a big Project. what to do now ?
 
-- [1]
+- 1. first understand the code properly, and make a rough outline of it on paper.
+- 2. make a list of all inputs given to the application.
+- 3. also make a list of all outputs, the application must give this and that many types of output.
+- 4. now understand which types of output and give technical names to them and make a list.
+     1. now break this list into small parts means small components.
+     2. now again make a list of it.
+     3. now think about which part or which view or which functionality is common in multiple components.
+     4. now again convent this same code in components.
+     5. add this component to the last components list.
+- 6. Giving numbering to these components according to complexity means required time to build them.
+- 7. Now start constructing one by one component.
+     1. pick the first component still is it complex make id divide it into small parts again.
+     2. make an outline of this component on paper.
+     3. write some algorithums loosely on how you code this component.
+- 8. if you do this at last your app is ready to deploy and scale and easy to maintain.
 
-###### Q1. Which image matches the flex layout defined in this style rule?
+#### Q1. Which image matches the flex layout defined in this style rule?
 
 ```css
 .container {
@@ -34,14 +48,14 @@ a problem can be small or big
 - [ ] ![C](images/Q1-C.jpg)
 - [ ] ![D](images/Q1-D.jpg)
 
-###### Q2. Variables declared with the let keyword have what type of scope?
+#### Q2. Variables declared with the let keyword have what type of scope?
 
 - [ ] function scope
 - [x] block scope
 - [ ] inline scope
 - [ ] global scope
 
-###### Q3. How to create Pop up React?
+#### Q3. How to create Pop up React?
 
 ```css
 .container {
@@ -52,7 +66,7 @@ a problem can be small or big
 }
 ```
 
-###### Q4. How to create Simple Promise?
+#### Q4. How to create Simple Promise?
 
 ```css
 const functionOfPromise = async () => {
@@ -343,54 +357,347 @@ Using Async and await Function.
 
 #### Q9. How to googling like senior software enginner? for 10X code writting.
 
-- [x] 1. "exact required keywords" or "exact error message" ................................at last
-- [x] 2. site:fireship.io our required query ...............................................at first
-- [x] 3. -jquery means -EXCLUDE WORD .......................................................at last
-- [x] 4. before:2020 or after:2020 .........................................................at last
-- [x] 5. 2013..2015 want content between this date .........................................at last
-- [x] 6. *tailwind means *wildcardword .....................................................at last
-- [x] 7. site:\*fireship.io -www combine selectors .........................................at last
-- [x] 8. :PDF or :image or :filetype .......................................................at last
+- 1.  "exact required keywords" or "exact error message" ................................at last
+- 2.  site:fireship.io our required query ...............................................at first
+- 3.  -jquery means -EXCLUDE WORD .......................................................at last
+- 4.  before:2020 or after:2020 .........................................................at last
+- 5.  2013..2015 want content between this date .........................................at last
+- 6.  *tailwind means *wildcardword .....................................................at last
+- 7.  site: \*fireship.io -www combine selectors ........................................at last
+      1. or inurl:fireship.io ...........................................................at any point of query
+- 8.  :PDF or :image or filetype:py or filetype:js ......................................at last
 
 ###### 1. "exact required keywords" or "exact error message"
 
 - if we write exact error message we can get exact google search results which include this exact error or words wrapped inside double quots.
-- [] eg.**"**has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource **"**
+- eg.
+  1. **"**has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource **"**
+  2. why I learn python "streaming" -pyAudio
 - and get result exact.
 
 ###### 2. site:fireship.io our required query
 
 - we want search results only from specific website then enter the website name after site:nameofwebsite.com and your query
-- [] eg. **site:**stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" \*react
+- eg. **site:**stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" \*react
 - now i get search result only from stackoverflow.com
 
 ###### 3. -jquery means -EXCLUDE WORD
 
 - I don`t want a keyword include in my search result use (- operator) -keywordname
-- [] eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" **-jquery**
+- eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" **-jquery**
 - I get result`s exclude jquery
 
 ###### 4. before:2020 or after:2020
 
 - want search result`s only after specific date or after the specific date use this operator
-- [] eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" -jquery **after:2020**
+- eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" -jquery **after:2020**
 
 ###### 5. 2013..2015 want content between this date
 
 - or want a results between the dates use this operator
-- [] eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" -jquery **2018..2020**
+- eg. site:stackoverflow.com "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" -jquery **2018..2020**
 
 ###### 6. *tailwind means *wildcardword
 
 - we want in result`s this wildcard-word must include
-- [] eg. "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" **\*react 18** -jquery
+- eg. "has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource" **\*react 18** -jquery
 
-###### 7. site:\*fireship.io -www combine selectors
+#### 7. site:\*fireship.io -www combine selectors
 
 - we can combine multiple operators
-- [] eg. in above examples I use multiple combinations.
+- eg. in above examples I use multiple combinations.
 
-###### 8. :PDF or :image or :filetype
+#### 8. :PDF or :image or :filetype
 
 - if we want specefic file type use this operator
-- [] eg. **:md** react code snippets dsa questions and answers
+- eg.
+
+  1. **:md** react code snippets dsa questions and answers
+  2. binary search tree filetype:py
+
+- if you click on search results directly .py file is open which is adout binary search tree.
+
+#### Q.10 How to what are the syntaxes of readme.md file? how to make a beautiful ?
+
+Markdown Cheatsheet
+
+---
+
+# Heading 1
+
+    Markup :  # Heading 1 #
+
+    -OR-
+
+    Markup :  ============= (below H1 text)
+
+## Heading 2
+
+    Markup :  ## Heading 2 ##
+
+    -OR-
+
+    Markup: --------------- (below H2 text)
+
+### Heading 3
+
+    Markup :  ### Heading 3 ###
+
+#### Heading 4
+
+    Markup :  #### Heading 4 ####
+
+Common text
+
+    Markup :  Common text
+
+_Emphasized text_
+
+    Markup :  _Emphasized text_ or *Emphasized text*
+
+~~Strikethrough text~~
+
+    Markup :  ~~Strikethrough text~~
+
+**Strong text**
+
+    Markup :  __Strong text__ or **Strong text**
+
+**_Strong emphasized text_**
+
+    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+
+[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+
+    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+
+[heading-1](#heading-1 "Goto heading-1")
+
+    Markup: [heading-1](#heading-1 "Goto heading-1")
+
+Table, like this one :
+
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+```
+
+Adding a pipe `|` in a cell :
+
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | \|            |
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  |  \|
+```
+
+Left, right and center aligned table
+
+| Left aligned Header | Right aligned Header | Center aligned Header |
+| :------------------ | -------------------: | :-------------------: |
+| Content Cell        |         Content Cell |     Content Cell      |
+| Content Cell        |         Content Cell |     Content Cell      |
+
+```
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+```
+
+`code()`
+
+    Markup :  `code()`
+
+```javascript
+var specificLanguage_code = {
+  data: {
+    lookedUpPlatform: 1,
+    query: "Kasabian+Test+Transmission",
+    lookedUpItem: {
+      name: "Test Transmission",
+      artist: "Kasabian",
+      album: "Kasabian",
+      picture: null,
+      link: "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp",
+    },
+  },
+};
+```
+
+    Markup : ```javascript
+             ```
+
+- Bullet list
+  - Nested bullet
+    - Sub-nested bullet etc
+- Bullet list item 2
+
+```
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
+
+-OR-
+
+ Markup : - Bullet list
+              - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2
+```
+
+1. A numbered list
+   1. A nested numbered list
+   2. Which is numbered
+2. Which is numbered
+
+```
+ Markup : 1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered
+```
+
+- [ ] An uncompleted task
+- [x] A completed task
+
+```
+ Markup : - [ ] An uncompleted task
+          - [x] A completed task
+```
+
+- [ ] An uncompleted task
+  - [ ] A subtask
+
+```
+ Markup : - [ ] An uncompleted task
+              - [ ] A subtask
+```
+
+> Blockquote
+>
+> > Nested blockquote
+
+    Markup :  > Blockquote
+              >> Nested Blockquote
+
+_Horizontal line :_
+
+---
+
+    Markup :  - - - -
+
+_Image with alt :_
+
+![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+
+    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+
+Foldable text:
+
+<details>
+  <summary>Title 1</summary>
+  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+<details>
+  <summary>Title 2</summary>
+  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
+</details>
+
+    Markup : <details>
+               <summary>Title 1</summary>
+               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+             </details>
+
+```html
+<h3>HTML</h3>
+<p>Some HTML code here</p>
+```
+
+Link to a specific part of the page:
+
+[Go To TOP](#TOP)
+
+    Markup : [text goes here](#section_name)
+              section_title<a name="section_name"></a>
+
+Hotkey:
+
+<kbd>⌘F</kbd>
+
+<kbd>⇧⌘F</kbd>
+
+    Markup : <kbd>⌘F</kbd>
+
+Hotkey list:
+
+| Key       | Symbol |
+| --------- | ------ |
+| Option    | ⌥      |
+| Control   | ⌃      |
+| Command   | ⌘      |
+| Shift     | ⇧      |
+| Caps Lock | ⇪      |
+| Tab       | ⇥      |
+| Esc       | ⎋      |
+| Power     | ⌽      |
+| Return    | ↩      |
+| Delete    | ⌫      |
+| Up        | ↑      |
+| Down      | ↓      |
+| Left      | ←      |
+| Right     | →      |
+
+Emoji:
+
+:exclamation: Use emoji icons to enhance text. :+1: Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+
+    Markup : Code appears between colons :EMOJICODE:
+
+#### Q11. How to update the array of objects in a sequential way?
+
+1. first update the array in normal way.
+2. then sort the array and then rerender the component using useEffect`s dependency method.
+
+```css
+
+const [obj,setObj]= useState([]);
+
+const data = [
+  { id: 1, car: "Toyota 2020", owner: "BM" },
+  { id: 2, car: "Nissan", owner: "DK" },
+  { id: 3, car: "Mazda", owner: "JA" },
+  { id: 4, car: "Ford", owner: "DS" }
+];
+
+const newData = ["Audi", "Bentley", "BMW", "Buick"];
+
+const newCars = data.map((obj, i) => {
+  setObj(...obj, car: newData[i])
+  });
+
+// For sequential way use useEffects dependency parameterto rerender the component and that sort the data according to need
+// this is the best way to do it. in sequential way,
+// example in expense report`s pending view manager and HR approving checkbox.
+
+console.log(newCars);
+```
+
+#### Q12. How to solve emotion react not found an error ?
+
+- Propery convert the Mui versions from v5 to V4 or V5 to V4.
+
+#### Q13. how to autocomplect the vs code sugession properly in code using ctr + space or ctr + i ?
